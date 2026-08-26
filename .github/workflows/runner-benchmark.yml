@@ -1,0 +1,43 @@
+name: Runner Benchmark
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/runner-benchmark.yml
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: CPU and memory info
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '=== CPU ==='
+          echo "nproc: $(nproc)"
+          lscpu
+          echo
+          echo '=== Memory ==='
+          free -h
+          echo
+          echo '=== Disk ==='
+          df -h /
+          echo
+          echo '=== Kernel ==='
+          uname -a
+
+      - name: CPU benchmark
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '=== OpenSSL ==='
+          openssl version
+          echo
+          echo '=== Single-core SHA-256 benchmark (5 s) ==='
+          openssl speed -seconds 5 sha256
+          echo
+          echo "=== Multi-core SHA-256 benchmark ($(nproc) workers, 5 s) ==="
+          openssl speed -seconds 5 -multi "$(nproc)" sha256
