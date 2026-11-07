@@ -1,0 +1,10 @@
+{
+  "recommendedCandidateId": "option-a",
+  "candidates": [
+    {
+      "id": "option-a",
+      "title": "单脚本标准库实现：按平台分支采集并格式化输出",
+      "content": "## 方案范围\n\n新增单个 Python 脚本（如 `machine_info.py`），使用标准库实现，覆盖 CPU、内存、磁盘、OS、主机名、架构全部字段，仅终端输出，不保存文件，不提供 `--json` 参数。\n\n## 实现方式\n\n- 使用 `platform` 模块获取 OS 名称/版本、主机名、架构；`os` 模块获取 CPU 核心数；`shutil.disk_usage` 获取磁盘总量/可用量。\n- 内存信息：Windows 使用 `ctypes` 调用 `GlobalMemoryStatusEx`；Linux/WSL2 读取 `/proc/meminfo`；macOS 使用 `sysctl` 或 `vm_stat`（仅可移植性设计，不声明通过）。\n- CPU 型号：Windows 通过 `wmic` 或注册表；Linux 读取 `/proc/cpuinfo` 的 `model name`；macOS 使用 `sysctl machdep.cpu.brand_string`。\n- 输出为人类可读文本，分节展示 CPU、内存、磁盘、操作系统、主机名、架构。\n- 无命令行参数，直接运行打印。\n\n## 权衡\n\n- 优点：单一文件、无依赖、跨平台分支清晰、易于测试。\n- 缺点：平台分支代码较多；macOS 仅设计目标，不声明通过。\n\n## 风险\n\n- `/proc` 或 `wmic` 在某些受限环境中不可用，需提供回退值（如 '未知'）。\n- WSL2 环境下内存信息来自 `/proc/meminfo`，反映容器视图，需在实测中确认。\n\n## 验证\n\n- 在 Windows 与 WSL2 CentOS 上运行脚本，确认无报错且输出包含全部字段。\n- 检查无第三方依赖导入。\n- 确认无文件写入。\n\n## 适用性与选择理由\n\n此方案直接满足需求全部边界：标准库、无参数、仅终端输出、覆盖全部字段、平台分支清晰。推荐作为唯一候选。\n\n## 规划阶段留待决定的细节\n\n- 脚本文件名与存放路径（建议仓库根目录 `machine_info.py`）。\n- 磁盘信息针对哪个挂载点（建议根路径 `/` 或当前工作目录所在盘）。\n- 测试方式（运行脚本并断言输出包含字段关键词）。"
+    }
+  ]
+}
