@@ -207,6 +207,42 @@
       "at": "2026-11-07T17:43:25.864Z",
       "userReply": "仅补提交已实测的 Windows/WSL2 CentOS ST 结果至本需求完成报告；不提交本地 .omp 或 __pycache__。",
       "files": []
+    },
+    {
+      "operationId": "62e236ef-d46b-4cd9-b470-d535348a98a4",
+      "stage": "pr",
+      "actor": {
+        "name": "jiang",
+        "source": "local"
+      },
+      "at": "2026-11-07T17:44:24.846Z",
+      "userReply": "提交 machine_info.py 及标准库 unittest 到 main；Windows、WSL2 CentOS-7 均实际运行通过且两端 3/3 UT 通过，macOS 未实测。",
+      "files": [
+        {
+          "path": "docs/business-requirements/requirement-fed6566a-1116-42b4-8949-dd29b143837a.md",
+          "version": "7b8f312214ffb5b26fab3bb354ed807b9341fbf336f1ad570d39104a3e790ee0"
+        },
+        {
+          "path": "openspec/changes/requirement-fed6566a-1116-42b4-8949-dd29b143837a/proposal.md",
+          "version": "d1f99635ebeaa02deeb78bab02bf81a0880c1200d71c5e04cf7e22a69b5707de"
+        },
+        {
+          "path": "openspec/changes/requirement-fed6566a-1116-42b4-8949-dd29b143837a/specs/machine-info/spec.md",
+          "version": "6714f9eae1cbaaa7433674eb11d81ecf7d7042828bc4fd056774d17939b576d9"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a-solutions.json",
+          "version": "57079806e66e8016375811d95305881f42f140796b70f9f497980e31a2df124b"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a.md",
+          "version": "e81f7c48e3f81dc90153574fa28c6cd325b0bf7433fe90adfa7cb43f31086ed1"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a-completion.md",
+          "version": "7532b5a4a2eb9cde5d67d1b0489574e62ec8764cbc3e4d369880e2c09b299a59"
+        }
+      ]
     }
   ],
   "marks": {
@@ -220,6 +256,42 @@
       "at": "2026-11-07T17:40:40.447Z",
       "userReply": "Windows 与 WSL2 CentOS-7 均实际运行脚本退出 0、字段完整；两端 unittest 3/3 通过；macOS 未测。仅提交预览所列 10 个文件并推送当前特性分支。",
       "files": [
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a-completion.md",
+          "version": "7532b5a4a2eb9cde5d67d1b0489574e62ec8764cbc3e4d369880e2c09b299a59"
+        }
+      ]
+    },
+    "pr-submitted": {
+      "operationId": "62e236ef-d46b-4cd9-b470-d535348a98a4",
+      "stage": "pr",
+      "actor": {
+        "name": "jiang",
+        "source": "local"
+      },
+      "at": "2026-11-07T17:44:24.846Z",
+      "userReply": "提交 machine_info.py 及标准库 unittest 到 main；Windows、WSL2 CentOS-7 均实际运行通过且两端 3/3 UT 通过，macOS 未实测。",
+      "files": [
+        {
+          "path": "docs/business-requirements/requirement-fed6566a-1116-42b4-8949-dd29b143837a.md",
+          "version": "7b8f312214ffb5b26fab3bb354ed807b9341fbf336f1ad570d39104a3e790ee0"
+        },
+        {
+          "path": "openspec/changes/requirement-fed6566a-1116-42b4-8949-dd29b143837a/proposal.md",
+          "version": "d1f99635ebeaa02deeb78bab02bf81a0880c1200d71c5e04cf7e22a69b5707de"
+        },
+        {
+          "path": "openspec/changes/requirement-fed6566a-1116-42b4-8949-dd29b143837a/specs/machine-info/spec.md",
+          "version": "6714f9eae1cbaaa7433674eb11d81ecf7d7042828bc4fd056774d17939b576d9"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a-solutions.json",
+          "version": "57079806e66e8016375811d95305881f42f140796b70f9f497980e31a2df124b"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a.md",
+          "version": "e81f7c48e3f81dc90153574fa28c6cd325b0bf7433fe90adfa7cb43f31086ed1"
+        },
         {
           "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a-completion.md",
           "version": "7532b5a4a2eb9cde5d67d1b0489574e62ec8764cbc3e4d369880e2c09b299a59"
@@ -388,9 +460,90 @@
       "knownCommitShas": [
         "279fdaa632f9ffbd87c897d2efb17c1c13168259"
       ]
+    },
+    {
+      "operationId": "62e236ef-d46b-4cd9-b470-d535348a98a4",
+      "kind": "pr-submitted",
+      "actor": {
+        "name": "jiang",
+        "source": "local"
+      },
+      "at": "2026-11-07T17:44:24.846Z",
+      "files": [
+        {
+          "path": "docs/business-requirements/requirement-fed6566a-1116-42b4-8949-dd29b143837a.md",
+          "version": "7b8f312214ffb5b26fab3bb354ed807b9341fbf336f1ad570d39104a3e790ee0"
+        },
+        {
+          "path": "docs/dev-requirements/requirement-fed6566a-1116-42b4-8949-dd29b143837a.json",
+          "version": "16c173e708849dad75f9c1626011d40c6b29eb092fe27741c360af49f3d85dce"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a-completion.md",
+          "version": "7532b5a4a2eb9cde5d67d1b0489574e62ec8764cbc3e4d369880e2c09b299a59"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a-solutions.json",
+          "version": "57079806e66e8016375811d95305881f42f140796b70f9f497980e31a2df124b"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-11-07-requirement-fed6566a-1116-42b4-8949-dd29b143837a.md",
+          "version": "e81f7c48e3f81dc90153574fa28c6cd325b0bf7433fe90adfa7cb43f31086ed1"
+        },
+        {
+          "path": "machine_info.py",
+          "version": "59aa7204e0cf78fcfdc690df1317313cc1aeff46d231ab38dfca5108ec1165e8"
+        },
+        {
+          "path": "openspec/changes/requirement-fed6566a-1116-42b4-8949-dd29b143837a/.openspec.yaml",
+          "version": "81aea30345a23fbbca1807bcd644b098b3dae15c99415fd7ca7d7f0728d036ba"
+        },
+        {
+          "path": "openspec/changes/requirement-fed6566a-1116-42b4-8949-dd29b143837a/proposal.md",
+          "version": "d1f99635ebeaa02deeb78bab02bf81a0880c1200d71c5e04cf7e22a69b5707de"
+        },
+        {
+          "path": "openspec/changes/requirement-fed6566a-1116-42b4-8949-dd29b143837a/specs/machine-info/spec.md",
+          "version": "6714f9eae1cbaaa7433674eb11d81ecf7d7042828bc4fd056774d17939b576d9"
+        },
+        {
+          "path": "tests/test_machine_info.py",
+          "version": "9a7eecbeed862136cd01015744576716efeead9f9c61e999117b7c7945c106a1"
+        }
+      ],
+      "target": {
+        "localSourceRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "sourceRepository": "github.com/jchanghong023/test",
+        "sourceRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "baseRepository": "github.com/jchanghong023/test",
+        "baseRef": "refs/heads/main",
+        "remote": "origin",
+        "remoteUrl": "https://github.com/jchanghong023/test",
+        "targetRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "observedTip": "45a434039f1528a5d22c71e92d012ec0c23d2df8"
+      },
+      "authorizedCommits": [],
+      "knownCommitShas": [
+        "279fdaa632f9ffbd87c897d2efb17c1c13168259",
+        "45a434039f1528a5d22c71e92d012ec0c23d2df8"
+      ]
     }
   ],
-  "pr": null,
+  "pr": {
+    "pr": {
+      "forge": "github",
+      "repository": "github.com/jchanghong023/test",
+      "number": 1,
+      "url": "https://github.com/jchanghong023/test/pull/1",
+      "sourceRef": "dev-machine-info-e2e-20261108",
+      "baseRef": "main"
+    },
+    "state": "open",
+    "headSha": "45a434039f1528a5d22c71e92d012ec0c23d2df8",
+    "baseSha": "98e2fe855386633f876d9f434d5c3f09fecfd28e",
+    "mergeSha": null,
+    "observedAt": "2026-11-07T17:44:31.740Z"
+  },
   "testing": "not-started",
   "relatedRequirementIds": []
 }
