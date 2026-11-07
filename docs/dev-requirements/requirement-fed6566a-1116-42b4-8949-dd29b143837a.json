@@ -4,7 +4,7 @@
   "changeId": "requirement-fed6566a-1116-42b4-8949-dd29b143837a",
   "branch": "dev-machine-info-e2e-20261108",
   "stage": "testing",
-  "lifecycle": "active",
+  "lifecycle": "completed",
   "materials": [
     {
       "id": "business",
@@ -290,6 +290,17 @@
       "at": "2026-11-07T17:48:27.130Z",
       "userReply": "PR #1 已合入；合入 main 的脚本 Git blob 与 Windows/WSL2 CentOS 实测版本完全一致，开始独立验收。",
       "files": []
+    },
+    {
+      "operationId": "88e62236-53e9-45e0-b234-b5e08f9b62fe",
+      "stage": "testing",
+      "actor": {
+        "name": "jiang",
+        "source": "local"
+      },
+      "at": "2026-11-07T17:49:03.792Z",
+      "userReply": "合入 main 的 machine_info.py Git blob 与实测版本一致；Windows 和 WSL2 CentOS-7 均实际运行退出 0、输出全部字段及单位，两端 unittest 3/3 通过；macOS 未实测。独立测试通过。",
+      "files": []
     }
   ],
   "marks": {
@@ -380,6 +391,17 @@
           "version": "7532b5a4a2eb9cde5d67d1b0489574e62ec8764cbc3e4d369880e2c09b299a59"
         }
       ]
+    },
+    "tested": {
+      "operationId": "88e62236-53e9-45e0-b234-b5e08f9b62fe",
+      "stage": "testing",
+      "actor": {
+        "name": "jiang",
+        "source": "local"
+      },
+      "at": "2026-11-07T17:49:03.792Z",
+      "userReply": "合入 main 的 machine_info.py Git blob 与实测版本一致；Windows 和 WSL2 CentOS-7 均实际运行退出 0、输出全部字段及单位，两端 unittest 3/3 通过；macOS 未实测。独立测试通过。",
+      "files": []
     }
   },
   "solutionBasis": {
@@ -665,6 +687,35 @@
         "2a455c5a4387acc8da3d3fba197a3272cae3bd92",
         "a5a9b04839df6af5596035a7dbe1e34ed6bf9bda"
       ]
+    },
+    {
+      "operationId": "88e62236-53e9-45e0-b234-b5e08f9b62fe",
+      "kind": "tested",
+      "actor": {
+        "name": "jiang",
+        "source": "local"
+      },
+      "at": "2026-11-07T17:49:03.792Z",
+      "files": [],
+      "target": {
+        "localSourceRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "sourceRepository": "github.com/jchanghong023/test",
+        "sourceRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "baseRepository": "github.com/jchanghong023/test",
+        "baseRef": "refs/heads/main",
+        "remote": "origin",
+        "remoteUrl": "https://github.com/jchanghong023/test",
+        "targetRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "observedTip": "cedb1f18daf4be31758daea44183276aa38fc05f"
+      },
+      "authorizedCommits": [],
+      "knownCommitShas": [
+        "279fdaa632f9ffbd87c897d2efb17c1c13168259",
+        "45a434039f1528a5d22c71e92d012ec0c23d2df8",
+        "2a455c5a4387acc8da3d3fba197a3272cae3bd92",
+        "a5a9b04839df6af5596035a7dbe1e34ed6bf9bda",
+        "cedb1f18daf4be31758daea44183276aa38fc05f"
+      ]
     }
   ],
   "pr": {
@@ -682,6 +733,6 @@
     "mergeSha": "c09fba320fbb29e069c43c5f3b213504a55ee769",
     "observedAt": "2026-11-07T17:47:06.041Z"
   },
-  "testing": "in-progress",
+  "testing": "tested",
   "relatedRequirementIds": []
 }
