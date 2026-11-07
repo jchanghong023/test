@@ -279,6 +279,17 @@
           "version": "7532b5a4a2eb9cde5d67d1b0489574e62ec8764cbc3e4d369880e2c09b299a59"
         }
       ]
+    },
+    {
+      "operationId": "fc7e6524-9508-4ac7-aae9-4b1ba0f54583",
+      "stage": "testing",
+      "actor": {
+        "name": "jiang",
+        "source": "local"
+      },
+      "at": "2026-11-07T17:48:27.130Z",
+      "userReply": "PR #1 已合入；合入 main 的脚本 Git blob 与 Windows/WSL2 CentOS 实测版本完全一致，开始独立验收。",
+      "files": []
     }
   ],
   "marks": {
@@ -626,6 +637,34 @@
         "45a434039f1528a5d22c71e92d012ec0c23d2df8",
         "2a455c5a4387acc8da3d3fba197a3272cae3bd92"
       ]
+    },
+    {
+      "operationId": "fc7e6524-9508-4ac7-aae9-4b1ba0f54583",
+      "kind": "set-test-state",
+      "actor": {
+        "name": "jiang",
+        "source": "local"
+      },
+      "at": "2026-11-07T17:48:27.130Z",
+      "files": [],
+      "target": {
+        "localSourceRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "sourceRepository": "github.com/jchanghong023/test",
+        "sourceRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "baseRepository": "github.com/jchanghong023/test",
+        "baseRef": "refs/heads/main",
+        "remote": "origin",
+        "remoteUrl": "https://github.com/jchanghong023/test",
+        "targetRef": "refs/heads/dev-machine-info-e2e-20261108",
+        "observedTip": "a5a9b04839df6af5596035a7dbe1e34ed6bf9bda"
+      },
+      "authorizedCommits": [],
+      "knownCommitShas": [
+        "279fdaa632f9ffbd87c897d2efb17c1c13168259",
+        "45a434039f1528a5d22c71e92d012ec0c23d2df8",
+        "2a455c5a4387acc8da3d3fba197a3272cae3bd92",
+        "a5a9b04839df6af5596035a7dbe1e34ed6bf9bda"
+      ]
     }
   ],
   "pr": {
@@ -643,6 +682,6 @@
     "mergeSha": "c09fba320fbb29e069c43c5f3b213504a55ee769",
     "observedAt": "2026-11-07T17:47:06.041Z"
   },
-  "testing": "not-started",
+  "testing": "in-progress",
   "relatedRequirementIds": []
 }
